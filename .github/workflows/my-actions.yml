@@ -1,0 +1,26 @@
+name: My-Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Windows-test:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Print system info of Win machine
+        run: |
+          echo "Hi! There is info about me"
+          cd C:\Windows\System32
+          systeminfo
+  
+  Linux-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print system info of Linux(ubuntu) machine
+        run: |
+          echo "Hi! There is info about me"
+          hostnamectl
