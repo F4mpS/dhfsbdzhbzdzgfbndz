@@ -13,6 +13,13 @@ jobs:
       - name: List current folder
         run: dir
         
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
+      - name: List current folder
+        run: dir
+     
+        
 #      - name: Print system info of Win machine
 #        run: |
 #          echo "Hi! There is info about me"
@@ -30,5 +37,11 @@ jobs:
 #          echo "Hi! There is info about me"
 #          hostnamectl
       
+      - name: List current folder
+        run: ls -la
+
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
       - name: List current folder
         run: ls -la
