@@ -10,17 +10,25 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - name: Print system info of Win machine
-        run: |
-          echo "Hi! There is info about me"
-          cd C:\Windows\System32
-          systeminfo
-  
+      - name: List current folder
+        run: dir
+        
+#      - name: Print system info of Win machine
+#        run: |
+#          echo "Hi! There is info about me"
+#          cd C:\Windows\System32
+#          systeminfo
+       
+
   Linux-test:
     runs-on: ubuntu-latest
+    needs: [Windows-test]
     
     steps:
-      - name: Print system info of Linux(ubuntu) machine
-        run: |
-          echo "Hi! There is info about me"
-          hostnamectl
+#      - name: Print system info of Linux(ubuntu) machine
+#        run: |
+#          echo "Hi! There is info about me"
+#          hostnamectl
+      
+      - name: List current folder
+        run: ls -la
